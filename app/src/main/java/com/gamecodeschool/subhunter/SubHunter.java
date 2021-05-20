@@ -21,7 +21,6 @@ public class SubHunter extends Activity {
 
     //These variables can be "seen"
     //throughout the SubHunter class
-
     int numberHorizontalPixels;
     int numberVerticalPixels;
     int blockSize;
@@ -75,6 +74,10 @@ public class SubHunter extends Activity {
      */
 
     void newGame(){
+        Random random = new Random();
+        subHorizontalPosition = random.nextInt(gridWidth);
+        subVerticalPosition = random.nextInt(gridHeight);
+        shotsTaken = 0;
 
         Log.d("Debugging", "In newGame");
 
